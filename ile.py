@@ -1,9 +1,12 @@
-with open('my_file.txt', 'x') as f:
-    contents = f.read()
-    print(contents)
+file=open('student.txt','x')
+file.close()
 
-with open('my_file.txt', 'w') as f:
-    f.write('Hello, world!\n')
-
-with open('my_file.txt', 'a') as f:
-    f.write('This is some additional data.\n')
+import os
+print("checking if the file exist or not")
+if os.path.exists('student1.txt'):
+    os.remove('student1.txt')
+else:
+    print("the file doesnot exist")
+file=open('studen1.txt','w')
+file.write("Hello Im a Student")
+file.close()
